@@ -1,0 +1,17 @@
+spring:
+  # 数据源参数
+  datasource:
+    url: jdbc:mysql://localhost:3306/note?useSSL=false
+    username: root
+    password: p123456
+
+  # JPA/Hibernate 参数
+  jpa:
+    hibernate:
+      # 指定数据库初始化方式，有 create, create-drop, update, validate 四种方式可选
+      ddl-auto: update
+
+    properties:
+      hibernate:
+        # 指定 Dialect 可以让 Hibernate 根据对应的数据库生成性能更好的 SQL 语句
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
